@@ -1,11 +1,10 @@
-# Telegram Weather Bot (Chelyabinsk)
+# Telegram Weather Bot
 
-Бот показывает прогноз погоды (сегодня и завтра) для Челябинска. Источник — Open‑Meteo (без ключа API).
+Бот показывает прогноз погоды (сегодня и завтра). Источник — Open‑Meteo (без ключа API).
 
 ## Возможности
 - Команды: `/start`, `/today [город]`, `/tomorrow [город]`, `/weather <город>`
 - Эмодзи и описание погоды на русском
-- Локальная таймзона `Asia/Yekaterinburg`
 
 ## Подготовка
 1. Установите Python 3.10+.
@@ -44,7 +43,7 @@ python -m src.bot
 Создайте `/etc/systemd/system/weather-bot.service`:
 ```ini
 [Unit]
-Description=Telegram Weather Bot (Chelyabinsk)
+Description=Telegram Weather Bot
 After=network.target
 
 [Service]
@@ -66,7 +65,3 @@ journalctl -u weather-bot -f
 
 ## Примечания
 - Источник данных: `https://open-meteo.com/`
-- Координаты Челябинска: 55.1644, 61.4368
-- Таймзона: Asia/Yekaterinburg
-
-
